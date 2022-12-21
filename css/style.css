@@ -1246,3 +1246,90 @@ h6 {
 .hero-section.clip .title__effect.is-visible {
     opacity: 1
 }
+
+
+/* TODOS PAGE */
+#myBg{
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: black;
+}
+
+#todoContainer {
+    /* Center Card */
+    height: 100vh; 
+    flex-direction: column;
+}
+
+#todoContainer > div > h1 {
+    font-weight: 900;
+    font-family: inherit;
+    color: white;
+    opacity: 99%;
+}
+
+.card {
+    color: white;
+    background: #000000d0;
+    max-width: 500px;
+    width: 100%;
+}
+
+.card > .todos > h2,
+input.search {
+    color: white;
+}
+
+.ui.search.selection {
+    background: #7c7c7c6b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    padding: 0.4em 1em;
+    /* Removes blue background and bordering*/
+    outline: none;
+    border: none;
+    /* Increase width */
+    width: 100%;
+    max-width: 100%;
+}
+
+button {
+    background: #7c7c7c2b;
+    transition: 0.2s ease-in-out;
+    margin: 0.3em;
+    /* Removes blue background and border */
+    outline: none;
+    border: none;
+}
+
+button:hover {
+    background: #7c7c7c6b;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px black;
+}
+
+footer a {
+    padding: 20px;
+    text-shadow: 1px 1px 2px rgb(250, 250, 250);
+}
+
+#imageid {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* or object-fit: contain; */
+    opacity: 0.5;
+}
