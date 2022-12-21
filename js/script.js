@@ -5,11 +5,10 @@ const userDropdown = document.getElementById("userDropdown")
 window.addEventListener('load', function(){
     console.log("It loaded!")
     populateDropdown(userDropdown);
-    userDropdown.onchange = displayTodos;
 })
 
 function populateDropdown(dropdown) {
-    console.log("This is to populate")
+    console.log("This is to populate users names")
     fetch("http://localhost:8083/api/users")
     .then(res => res.json())
     .then(data => {
@@ -18,9 +17,4 @@ function populateDropdown(dropdown) {
             dropdown.appendChild(option)
         }
     })
-
-}
-
-function displayTodos() {
-    console.log("Displaying Tasks")
 }
