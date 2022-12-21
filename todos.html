@@ -33,13 +33,25 @@
             <div class="card rounded-5 p-5 m-5">
                 <!-- User Search Stuff -->
                 <select id="userDropdown" class="ui search dropdown mb-4 d-flex align-items-center">
-                    <option>Select a User</option>
+                    <option value disabled selected>Select a User</option>
                 </select>
 
                 <!-- User To-Do Content -->
                 <div class="todos">
                     <h2 id="userNameField" class="">Select a User</h2>
-                    <div id="description" class="description">User's To-Dos will display here.</div>
+                    <!-- <div id="description" class="description">User's To-Dos will display here.</div> -->
+                    <table class="table text-bg-dark" id="todoTable">
+                        <!-- Headers for Table -->
+                        <thead class="todoTableHead text-bg-dark">
+                            <th>Task: </th>
+                            <th>Priority:</th>
+                            <th class="hideextra">Deadline:</th>
+                        </thead>
+                        <!-- Table Content -->
+                        <tbody id="todoTableBody">
+                            <!-- FILLED THROUGH JS -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
     </main>
@@ -65,7 +77,6 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="js/cities.js"></script>
     <script src="js/script.js"></script>
 
     <!-- Semantic UI Dropdown -->
