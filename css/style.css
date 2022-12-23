@@ -1361,3 +1361,4 @@ color: pink;
 text-align: start;
 }
   
+.hideextra { white-space: nowrap; overflow: hidden; text-overflow:ellipsis; }
