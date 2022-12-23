@@ -3,6 +3,9 @@
 // Init Vars Here
 const userDropdown = document.getElementById("userDropdown")
 const userNameField = document.getElementById("userNameField")
+const todoTable = document.getElementById("todoTable")
+const todoTableBody = document.getElementById("todoTableBody")
+const msg = document.getElementById("msg")
 
 let userSelected;
 
@@ -25,17 +28,38 @@ function populateDropdown(dropdown) {
 }
 
 function viewUserTasks() {
+    todoTableBody.innerHTML = "";       // Reset Table
+    msg.innerHTML = ""         // Reset MSG
     userSelected = userDropdown.value;
+
     fetch(`http://localhost:8083/api/todos/byuser/${userSelected}`)
     .then(res => res.json())
     .then(todos => {
-        // If user has no todos then...
+        console.log(todos.length)
+        // If a user has no todos then...
         if ((todos.length < 1) || todos === null) {
-            // TODO: Display no tasks for this user
-        } else {
-            // TODO: Populate Table
+            todoTable.style.display = "none";
+            msg.innerHTML = "This user has no tasks to do."
         }
-    })
-    // Display user selected
-    userNameField.innerHTML = $("#userDropdown option:selected").text();
+        // If a user contains a todo then display the todos.
+        else {
+            for (let task of todos) {
+                let row = todoTableBody.insertRow(-1);
+                for (let property in task) {
+                    switch (property) {
+                        // If one of these properties > add to cell
+                        case "description":
+                        case "priority":
+                        case "deadline":
+                        let cell = row.insertCell(-1);
+                        cell.innerHTML = task[property];
+                        break;
+                    }
+                }
+            }
+            todoTable.style.display = "block";
+        }
+        // Display user selected
+        userNameField.innerHTML = $("#userDropdown option:selected").text();
+    });
 }
