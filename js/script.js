@@ -49,13 +49,17 @@ function viewUserTasks() {
                     switch (property) {
                         // If one of these properties > add to cell
                         case "description":
-                        case "priority":
                         case "deadline":
                         let cell = row.insertCell(-1);
                         cell.innerHTML = task[property];
                         break;
                     }
                 }
+                let anchorCell = row.insertCell(-1);
+                let anchor = document.createElement("a");
+                anchor.href = `todo_details.html?toDoid=${task.id}`;
+                anchor.text = "See Details";
+                anchorCell.appendChild(anchor);
             }
             todoTable.style.display = "block";
         }
