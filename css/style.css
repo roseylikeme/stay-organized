@@ -1274,7 +1274,7 @@ h6 {
 .card {
     color: white;
     background: #000000d0;
-    max-width: 500px;
+    max-width: 650px;
     width: 100%;
 }
 
@@ -1333,3 +1333,31 @@ footer a {
     object-fit: cover; /* or object-fit: contain; */
     opacity: 0.5;
 }
+
+td{
+width: 100%;
+}
+
+td a{
+color: #ffa59d;
+}
+
+td a:hover{
+color: #ff6d60;
+}
+
+.tableHead {
+color: orange;
+font-size: x-large;
+font-weight: 900;
+}
+
+.tr2 {
+background-color: rgba(69, 69, 69, 0.744);
+}
+
+.thead {
+color: pink;
+text-align: start;
+}
+  
