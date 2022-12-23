@@ -22,40 +22,51 @@
 
 <body>
     <main>
-        <div id="myBg">
-            <img id="imageid"
-                src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2020_20/3346461/200512-stock-organized-desk-ew-1237p.jpg" />
-        </div>
-        <div id="todoContainer" class="container justify-content-center d-flex align-items-center">
-            <div>
-                <h1 class="text-center mt-4">View ToDos</h1>
-            </div>
-            <div class="card rounded-5 p-5 m-5">
-                <!-- User Search Stuff -->
-                <select id="userDropdown" class="ui search dropdown mb-4 d-flex align-items-center">
-                    <option value disabled selected>Select a User</option>
-                </select>
-
-                <!-- User To-Do Content -->
-                <div class="todos">
-                    <h2 id="userNameField" class="">Select a User</h2>
-
-                    <!-- <div id="description" class="description">User's To-Dos will display here.</div> -->
-                    <table class="table text-bg-dark" id="todoTable">
-                        <!-- Headers for Table -->
-                        <thead class="todoTableHead text-bg-dark">
-                            <th>Task: </th>
-                            <th>Deadline:</th>
-                            <th class="hideextra">More Info:</th>
-                        </thead>
-                        <!-- Table Content -->
-                        <tbody id="todoTableBody">
-                            <!-- FILLED THROUGH JS -->
-                        </tbody>
-                    </table>
-                    <p id="msg"></p>
+        <section class="hero-section hero-section--image clip">
+            <div class="hero-section__wrap">
+                <div class="container-smth">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                            <a href="index.html">Home</a>
+                            <a href="todos.html">View To-Dos</a>
+                            <a href="#">Add To-dos</a>
+                            <a href="#">Contact</a>
+                    </div>
+                      
+                    <span class="sideToggler" onclick="openNav()">&#9776; </span>
                 </div>
+                <div id="todoContainer" class="container justify-content-center d-flex align-items-center">
+                    <div>
+                        <h1 class="text-center mt-4">View ToDos</h1>
+                    </div>
+                    <div class="card rounded-5 p-5 m-5">
+                        <!-- User Search Stuff -->
+                        <select id="userDropdown" class="ui search dropdown mb-4 d-flex align-items-center">
+                            <option value disabled selected>Select a User</option>
+                        </select>
+        
+                        <!-- User To-Do Content -->
+                        <div class="todos">
+                            <h2 id="userNameField" class="">Select a User</h2>
+        
+                            <!-- <div id="description" class="description">User's To-Dos will display here.</div> -->
+                            <table class="table text-bg-dark" id="todoTable">
+                                <!-- Headers for Table -->
+                                <thead class="todoTableHead text-bg-dark">
+                                    <th>Task: </th>
+                                    <th>Deadline:</th>
+                                    <th class="hideextra">More Info:</th>
+                                </thead>
+                                <!-- Table Content -->
+                                <tbody id="todoTableBody">
+                                    <!-- FILLED THROUGH JS -->
+                                </tbody>
+                            </table>
+                            <p id="msg"></p>
+                        </div>
+                    </div>
             </div>
+        </section>
     </main>
 
     <!-- SCRIPTS -->
@@ -70,6 +81,14 @@
         img.ondragstart = () => {
             return false;
         };
+
+        function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
     </script>
 </body>
 
