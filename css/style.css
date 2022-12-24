@@ -1283,15 +1283,20 @@ input.search {
     color: white;
 }
 
-.ui.search.selection {
+input.d-flex,
+.ui.search.selection,
+.ui.fluid.input>input {
+    padding: 0.4em 1em;
     background: #7c7c7c6b;
     color: white;
     font-family: inherit;
     font-size: 105%;
-    padding: 0.4em 1em;
     /* Removes blue background and bordering*/
     outline: none;
     border: none;
+}
+
+.ui.search.selection {
     /* Increase width */
     width: 100%;
     max-width: 100%;
