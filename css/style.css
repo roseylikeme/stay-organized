@@ -1294,8 +1294,13 @@ input.d-flex,
     /* Removes blue background and bordering*/
     outline: none;
     border: none;
+    height: 2.5rem;
 }
 
+input.d-flex.w-100 {
+    border-radius: 5px;
+    height: 2.85rem;
+}
 .ui.search.selection {
     /* Increase width */
     width: 100%;
