@@ -43,7 +43,6 @@ function viewUserTasks() {
     fetch(`http://localhost:8083/api/todos/byuser/${userSelected}`)
         .then(res => res.json())
         .then(todos => {
-            console.log(todos.length)
             // If a user has no todos then...
             if ((todos.length < 1) || todos === null) {
                 todoTable.style.display = "none";
