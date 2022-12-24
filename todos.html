@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>View ToDos | Stay Organized</title>
+    <title>Stay Organized | View To-Dos</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&amp;subset=latin-ext" rel="stylesheet">
     <!-- Required meta tags -->
@@ -27,12 +27,11 @@
                 <div class="container-smth">
                     <div id="mySidenav" class="sidenav">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                            <a href="index.html">Home</a>
-                            <a href="todos.html">View To-Dos</a>
-                            <a href="#">Add To-dos</a>
-                            <a href="#">Contact</a>
+                        <a href="index.html">Home</a>
+                        <a href="todos.html">View To-Dos</a>
+                        <a href="new_todo.html">Add To-Dos</a>
+                        <a href="#">Contact</a>
                     </div>
-                      
                     <span class="sideToggler" onclick="openNav()">&#9776; </span>
                 </div>
                 <div id="todoContainer" class="container justify-content-center d-flex align-items-center">
@@ -44,11 +43,11 @@
                         <select id="userDropdown" class="ui search dropdown mb-4 d-flex align-items-center">
                             <option value disabled selected>Select a User</option>
                         </select>
-        
+
                         <!-- User To-Do Content -->
                         <div class="todos">
                             <h2 id="userNameField" class="">Select a User</h2>
-        
+
                             <!-- <div id="description" class="description">User's To-Dos will display here.</div> -->
                             <table class="table text-bg-dark" id="todoTable">
                                 <!-- Headers for Table -->
@@ -65,7 +64,7 @@
                             <p id="msg"></p>
                         </div>
                     </div>
-            </div>
+                </div>
         </section>
     </main>
 
@@ -75,12 +74,6 @@
     <!-- Semantic UI Dropdown -->
     <script>
         $(".ui.dropdown").dropdown();
-
-        // Prevents Users From Dragging Image For Downloads
-        const img = document.querySelector('img')
-        img.ondragstart = () => {
-            return false;
-        };
     </script>
 </body>
 
