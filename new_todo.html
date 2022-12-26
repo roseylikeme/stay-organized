@@ -41,6 +41,9 @@
                                     <!-- User To-Do Content -->
                                     <div class="">
                                         <h2 id="userNameField" class="">Add a New Todo</h2>
+                                        <!-- 
+                                        FORM STARTS 
+                                        =================-->
                                         <form>
                                             <div class="row">
                                                 <!-- Task -->
@@ -67,7 +70,7 @@
                                                     </select>
                                                 </div>
                                                 <!-- Priority + Deadline -->
-                                                <div class="row mt-3">
+                                                <div class="row mt-3 mb-3">
                                                     <div class="col">
                                                         <div>
                                                             <label for="priorityLevels" class="d-flex align-items-center">Priority</label>
@@ -80,16 +83,20 @@
                                                         </select>
                                                     </div>
                                                     <div class="col">
-                                                        <label for="deadline" class="d-flex align-items-center">Deadline:</label>
-                                                        <input type="date" id="deadline" class="d-flex w-100">
+                                                        <label for="deadline" class="deadlineField d-flex align-items-center">Deadline:</label>
+                                                        <input required type="date" id="deadline" class="d-flex w-100">
                                                     </div>
                                                 </div>
                                             </div>
+                                            <p id="msg"></p>
                                             <!-- Button -->
-                                            <button id="addTaskButton" type="button" class="btn btn-secondary my-5 text-light">
+                                            <button id="addTaskBtn" type="button" class="btn btn-secondary my-2 text-light">
                                                 Add Task
                                             </button>
                                         </form>
+                                        <!-- 
+                                        FORM ENDS
+                                        =================== -->
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +111,7 @@
 
     </footer>
      <!-- SCRIPTS -->
-     <!-- <script src="js/script.js"></script> -->
+     <script src="js/addtodos.js"></script>
 
      <!-- Semantic UI Dropdown -->
      <script>

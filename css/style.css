@@ -1432,3 +1432,7 @@ main {
 @media screen and (max-width: 767px) {
     .deadlineField {margin-top: 1rem;}
   }
+
+.row > #msg {
+    margin: 1rem;
+}

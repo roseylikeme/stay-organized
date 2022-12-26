@@ -5,8 +5,9 @@ const taskDescription = document.getElementById("description")
 const userDropdown = document.getElementById("listOfUsers")
 const categoriesDropdown = document.getElementById("listOfCategories")
 const priorityDropdown = document.getElementById("priorityLevels")
-const deadline = document.getElementById("deadline")
+const deadlineField = document.getElementById("deadline")
 const addTaskBtn = document.getElementById("addTaskBtn")
+const msg = document.getElementById("msg")
 
 window.addEventListener('load', function () {
     populateDropdown(userDropdown)
@@ -34,4 +35,41 @@ function populateCategoryDropdown(dropdown) {
                 dropdown.appendChild(option);
             }
         });
+}
+
+function createTodo() {
+    const userSelected = userDropdown.value;
+    const categorySelected = categoriesDropdown.value;
+    const prioritySelected = priorityDropdown.value;
+    const newTask = taskDescription.value;
+    const deadline = deadlineField.value;
+
+    const isEmpty = (!(userSelected && categorySelected && prioritySelected && newTask && deadlineField))
+    msg.innerHTML = ""         // Reset MSG
+
+    if (isEmpty){
+        // When there is one or more fields empty then...
+        alert("Please fill out all fields.")
+    } else {
+        // When all fields are filled ...
+        let newTodo = {
+            userid: userSelected,
+            category: categorySelected,
+            description: newTask,
+            deadline: new Date(deadline),
+            priority: prioritySelected
+        }
+        fetch("http://localhost:8083/api/todos", {
+            method: "POST",
+            body: JSON.stringify(newTodo),
+            headers: {
+                "Content-type":
+                    "application/json; charset=UTF-8"
+            }
+    
+        }).then(response => {
+            // TODO: Print todo updated
+            msg.innerHTML = "This user's task has been updated"
+        });
+    }
 }
