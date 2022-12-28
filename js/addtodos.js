@@ -42,7 +42,7 @@ function createTodo() {
     const categorySelected = categoriesDropdown.value;
     const prioritySelected = priorityDropdown.value;
     const newTask = taskDescription.value;
-    const deadline = deadlineField.value;
+    const deadlineDate = deadlineField.value;
 
     const isEmpty = (!(userSelected && categorySelected && prioritySelected && newTask && deadlineField))
     msg.innerHTML = ""         // Reset MSG
@@ -56,7 +56,7 @@ function createTodo() {
             userid: userSelected,
             category: categorySelected,
             description: newTask,
-            deadline: new Date(deadline),
+            deadline: deadlineDate,
             priority: prioritySelected
         }
         fetch("http://localhost:8083/api/todos", {
