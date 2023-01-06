@@ -35,15 +35,11 @@
           </div>
           <span class="sideToggler" onclick="openNav()">&#9776; </span>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="offset-lg-2 col-lg-8">
-              <div class="title-01 title-01--11 text-center">
-
+        <div class="container container justify-content-center d-flex align-items-center">
                 <div class="card rounded-5 p-5 m-5">
                   <!-- User To-Do Content -->
                   <div class="">
-                    <h2 id="userNameField" class="">Add a New User</h2>
+                    <h2 id="userNameField" class="text-center">Add a New User</h2>
                     <!-- 
                                         FORM STARTS 
                                         =================-->
@@ -52,36 +48,46 @@
                         <!-- Task -->
                         <div>
                           <div>
-                            <label for="name" class="d-flex align-items-center">Full Name:</label>
+                            <label for="nameInput" class="d-flex align-items-center">Full Name:</label>
                           </div>
                           <div class="ui input fluid">
-                            <input id="name" type="text" placeholder="Enter your name here ...">
+                            <input id="nameInput" type="text" placeholder="Enter your name here ...">
                           </div>
                         </div>
                         <!-- Username -->
                         <div>
                           <div>
-                            <label for="newUsername" class="d-flex align-items-center">Username:</label>
+                            <label for="userInput" class="d-flex align-items-center">Username:</label>
                           </div>
                           <div class="ui input fluid">
-                            <input id="newUsername" type="text" placeholder="Enter new username here ...">
+                            <input id="userInput" type="text" placeholder="Enter new username here ...">
                           </div>
                         </div>
                         <!-- Password -->
                         <div>
                           <div>
-                            <label for="newPass" class="d-flex align-items-center">Password:</label>
+                            <label for="passInput" class="d-flex align-items-center">Password:</label>
                           </div>
                           <div class="ui input fluid">
-                            <input id="newPass" type="text" placeholder="Enter password here ...">
+                            <input id="passInput" type="text" placeholder="Enter password here ...">
+                          </div>
+                        </div>
+                        <div>
+                          <div>
+                            <label for="confirmPass" class="d-flex align-items-center">Password:</label>
+                          </div>
+                          <div class="ui input fluid">
+                            <input id="confirmPass" type="text" placeholder="Confirm your password">
                           </div>
                         </div>
                       </div>
                       <p id="msg"></p>
                       <!-- Button -->
-                      <button id="addTaskBtn" type="button" class="btn btn-secondary my-2 text-light">
-                        Add Task
-                      </button>
+                      <div class="text-center mt-4">
+                        <button id="addUser" type="button" class="btn btn-secondary my-2 text-light">
+                          Add User
+                        </button>
+                      </div>
                     </form>
                     <!-- 
                                         FORM ENDS
