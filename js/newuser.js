@@ -29,7 +29,11 @@ window.addEventListener('load', function(){
             })
         } else {
             msg.innerHTML = "Something went wrong... check console."
-            console.log("Fields were left blank or pw didn't match")
+            if (isEmpty) {
+                console.log("Check for blank fields")
+            } else if (pw !== confpw){
+                console.log("Passwords don't match.")
+            }
         }
     }
 })
