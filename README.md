@@ -2,7 +2,7 @@
 
 The Rose Project presents a ToDo app using HTML, CSS, and JavaScript. 
 
-Time Spent: ~
+Time Spent: ~30 something hours
 
 Check it out: https://roseylikeme.github.io/stay-organized
 
