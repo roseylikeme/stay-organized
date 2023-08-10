@@ -26,7 +26,7 @@ Stretch Goals:
 
 ## Getting Started
 
-To get started, start by cloning the repo for the REST API from here: [Github : Stay-Organized-Workshop-Express-Server](https://github.com/DevelopIntelligenceBoulder/stay-organized-workshop-express-server)
+To get started, start by cloning the repo for the REST API from here: [Github:Stay-Organized-Server](https://github.com/DevelopIntelligenceBoulder/stay-organized-workshop-express-server)
 
 The cloned project doesn't have the npm packages it needs so you will need to install the project's dependencies with NPM (Node Package Manager) After unzipping the file, go into the project folder using the terminal and run the following command:
 ```
