@@ -8,7 +8,8 @@ Check it out: https://roseylikeme.github.io/stay-organized
 
 
 <p>
-<img src="#" alt="Home Page" width="738">
+<img width="738" alt="image" src="https://github.com/roseylikeme/stay-organized/assets/52300630/e733df9c-3b5e-4e85-ad64-bc85cc4ea407">
+
 </p>
 
 ## Description + Goal
@@ -19,18 +20,33 @@ Primary goal:
 - Allow users to view the ToDo tasks of a specific registered user
 - Allow users to ADD new ToDo tasks that are assigned to a user
 
+Stretch Goals:
+- Allow user to ADD a new user ✅
+- Allow user to mark a ToDo as completed ...
+
 ## Getting Started
 
-Dependencies Stuff
+To get started, start by cloning the repo for the REST API from here: [Github : Stay-Organized-Workshop-Express-Server](https://github.com/DevelopIntelligenceBoulder/stay-organized-workshop-express-server)
 
-## Challenges
-
-Insert Challenges Here
+The cloned project doesn't have the npm packages it needs so you will need to install the project's dependencies with NPM (Node Package Manager) After unzipping the file, go into the project folder using the terminal and run the following command:
+```
+npm install
+```
+Then start the local server by using the command:
+```
+npm start
+```
+You should get an expected output of: `App listening at port 8083`
 
 ## What I've Learned
 
-Stuff
+During this stage of my learning and development, I learned all about:
+- Rest APIS & HTTP Methods
+- Learned how to utilize Postman, an API development tool that makes it easy to interact with REST APIs.
 
-## Next Steps
+## Next Steps & TODOS
 
-More Stuff
+1. Fix the landing page where the hamburger shows, but it's not able to click
+2. Fix the container on the `Add a New Todo` tab. Some padding is messed up on the right side.
+Next Steps:
+3. Enhance the site by allowing the user to mark a ToDo task completed  
